@@ -1,6 +1,5 @@
-<div *ngFor="let hero of heroes">
-  <a routerLink="/details/{{hero.id}}">
-    Id: {{hero.id}} Name: {{hero.name}}
+<div *ngFor="let hero of heroes" class="heroes">
+  <a routerLink="/details/{{hero.id}}" (click)="messageService.add('Navigated to ' + hero.name)">
+    <span>{{hero.id}} </span>{{hero.name}}
   </a>
-  <br><br>
 </div>

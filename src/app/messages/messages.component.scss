@@ -1,0 +1,36 @@
+@import "../../assets/variables";
+
+.messages-container{
+  display: grid;
+  grid-template-rows: 1fr 10fr 1fr;
+  color: lime;
+  font-family: monospace;
+  background-color: $black;
+  padding: $spacer1_2 $spacer;
+  width: 150px;
+  height: 300px;
+
+  h2{
+    text-align: center;
+    font-family: monospace;
+  }
+
+  &__message {
+    font-size: 12px;
+    font-family: monospace;
+  }
+
+  &__clear{
+    cursor: pointer;
+    color: #3dff3d;
+    background: none;
+    outline: 0;
+    border: 0;
+    font-family: monospace;
+    text-align: end;
+  }
+}
+
+.wrapper{
+  overflow-x: auto;
+}

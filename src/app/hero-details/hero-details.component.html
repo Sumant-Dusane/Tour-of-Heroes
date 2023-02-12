@@ -1,7 +1,7 @@
-<div *ngIf="selectedHero">
+<div *ngIf="selectedHero" class="selected-hero">
   <button (click)="goBack()">Go Back</button>
   <h2>{{selectedHero.id}}: {{selectedHero.name | titlecase}}</h2>
-  <div>
+  <div class="selected-hero__edit">
     <label for="name">Name: </label>
     <input type="text" name="name" id="name" [(ngModel)]="selectedHero.name" placeholder="Name">
   </div>

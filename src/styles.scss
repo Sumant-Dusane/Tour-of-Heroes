@@ -1,1 +1,21 @@
-/* You can add global styles to this file, and also import other style files */
+@import "assets/variables";
+@import "assets/reset";
+
+.heroes {
+  padding: $spacer1_2*0.5 $spacer1_2;
+  margin: $spacer1_2;
+  background: $black;
+  color: $white;
+  width: max-content;
+  border-radius: 4px;
+  min-width: 60px;
+
+  a{
+    color: $white;
+
+    span{
+      color: #cecece;
+      margin-right: $spacer1_2*0.5;
+    }
+  }
+}
