@@ -3,9 +3,10 @@
 .messages-container{
   display: grid;
   grid-template-rows: 1fr 10fr 1fr;
-  color: lime;
+  color: $hacker-green;
   font-family: monospace;
   background-color: $black;
+  border: .5px solid $hacker-green;
   padding: $spacer1_2 $spacer;
   width: 150px;
   height: 300px;
