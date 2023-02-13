@@ -14,6 +14,10 @@ export class DashboardComponent {
   constructor(private heroService: HeroService, public messageService: MessagesService) { }
 
   ngOnInit(){
-    this.heroes = this.heroService.getHeroes().slice(0, 4);
+    this.getTopHeroes();
+  }
+
+  getTopHeroes(): void {
+    this.heroService.getHeroes().subscribe(heroes => this.heroes = heroes.slice(0, 4));
   }
 }

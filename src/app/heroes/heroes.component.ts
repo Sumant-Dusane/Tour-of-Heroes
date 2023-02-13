@@ -14,6 +14,10 @@ export class HeroesComponent {
   constructor(private heroService: HeroService, public messageService: MessagesService) { }
 
   ngOnInit(){
-    this.heroes = this.heroService.getHeroes();
+    this.getHeroes();
+  }
+
+  getHeroes(): void {
+    this.heroService.getHeroes().subscribe(heroes => this.heroes = heroes);
   }
 }
