@@ -8,5 +8,7 @@ export const HEROES: Hero[] = [
   {id: 5, name: 'Bubbly'},
   {id: 6, name: 'Bobby'},
   {id: 7, name: 'Rohit'},
-  {id: 8, name: 'Ganpat'},
+  {id: 8, name: 'Prakash'},
+  {id: 9, name: 'Saurabh'},
+  {id: 10, name: 'Pavin'},
 ];
