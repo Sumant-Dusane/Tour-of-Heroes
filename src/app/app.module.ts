@@ -1,13 +1,16 @@
-import { NgModule } from '@angular/core';
+import { isDevMode, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeroesComponent } from './heroes/heroes.component';
-import { HeroDetailsComponent } from './hero-details/hero-details.component';
-import { MessagesComponent } from './messages/messages.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
+import { HeroesComponent } from './components/heroes/heroes.component';
+import { HeroDetailsComponent } from './components/hero-details/hero-details.component';
+import { MessagesComponent } from './components/messages/messages.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { StoreModule } from '@ngrx/store';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { heroReducer } from './heroes-state/hero-reducer.reducer';
 
 @NgModule({
   declarations: [
@@ -21,6 +24,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    StoreModule.forRoot({heroes: heroReducer}),
+    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() }),
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,21 @@
+<!-- <div *ngFor="let hero of heroes" routerLink="/details/{{hero.id}}" class="heroes">
+  <a routerLink="/details/{{hero.id}}" (click)="messageService.add('Navigated to ' + hero.name)">
+    <span>{{hero.id}}</span>{{hero.name}}
+  </a>
+</div> -->
+
+<ul>
+  aAA
+  <li *ngFor="let item of heroes">
+    <p>ID: {{item.id}}</p>
+    <p>Name: {{item.name}}</p>
+  </li>
+</ul>
+
+
+<div>
+  <label for="name">Add Hero Name</label>
+  <input type="text" name="name" id="name" [(ngModel)]="heroName" />
+  <button (click)="addHeroes(heroName)">Add</button>
+</div>
+
